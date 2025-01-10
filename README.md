@@ -37,16 +37,39 @@ Este proyecto tiene como objetivo el usar diferentes técnicas de machine learni
 - Obtuve la antiguedad de la compañia.
 - Finalmente se filtró palabras clave de la descripción del trabajo, para decidir las palabras a usar me ayudé de una IA para que me diera términos comunes en las profesiones que filtré, esos datos se guardaron como valores booleanos (1 = Sí existe) y (0 = No existe).
 
+![Datos Agregados](Imágenes/NuevosValores.png)
+
 ### 5. Reducción de Dimensionalidad
 - Se eliminó todas las columnas innecesarias.
 - También se redujo la cantidad de datos borrando los datos atípicos que existian en las variables numéricas.
 
 ### 6. Exploración de Datos Limpios
 - Se exploró por medio de gráficos las variables que quedaban.
+- Algunos de los gráficos más interesantes son el de el tipo de compañia que predomian en el dataset:
+
+![Gráfica Tipo Compañia](Imágenes/GTP.png)
+
+- Otra gráfica interesante es la del sector que tiene más presencia, parece que duplica al que está en segundo puesto:
+
+![Gráfica Sector](Imágenes/GS.png)
+  
+- El de puesto de trabajos que existen, predomina el de científico de datos:
+
+![Gráfica de Trabajos](Imágenes/GT.png)
+
+- La antiguedad de las compañias ronda mayormente cerca de los 20 años:
+
+![Gráfica Antiguedad](Imágenes/GA.png)
+
+- Y el del nivel que requieren para el puesto, la mayoría no especifica el nivel requerido para el puesto:
+
+![Gráfica de Nivel](Imágenes/GN.png)
 
 ### 7. Transformación de Datos
 - En esta etapa se convirtieron los valores categóricos a numéricos.
 - Luego con esos valores se usó una "matriz de correlación de pearson" para determinar las variables que sí hacían un impacto en la variable "Salary Estimate".
+
+![Matriz de Correlación](Imágenes/MatrizCorrelacionPearson.png)
 
 ### 8. Normalización de Datos
 - Se normalizaron los datos por 2 métodos "Min-Max Scaling" y "Z-Score", se hicieron pruebas con ambos pero el que dió mejores resultados fue el  "Min-Max Scaling".
@@ -55,12 +78,15 @@ Este proyecto tiene como objetivo el usar diferentes técnicas de machine learni
 - En esta parte se dividieron los datos en 80% train y 20% test.
 
 ### 10. Implementación de Modelos
-- 
+- Se implementaron 5 modelos para comparar sus resultados para esta taréa en específico:
+  - A) Regresión Polinomial
+  - B) Árbol de Decisión
+  - C) Random Forest
+  - D) SVM
+  - E) Multilayer Perceptron
 
 ### 11. Evaluación de Modelos
-- 
-
-![Grupos](Imágenes/Grupos.png)
+- Los 5 modelos se evaluaron con 2 métricas: "Error Cuadrático Medio" y "R2 Score".
 
 ## Resultados 
 - Se pudo comparar varios métodos, de los cuales se pudo obtener los que sobresalieron para esta tarea en específico.
